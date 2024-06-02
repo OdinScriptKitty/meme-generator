@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script
+src="{{ url_for('static', filename='index.js') }}"
+type="module"
+></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEME WEBSITE</title>
+    <style>
+        body {margin-top: 0; display: flex;flex-direction:column; justify-content: center;background-repeat:no-repeat; background-color: black;}
+        h1{text-align: center;font-family: Arial, Helvetica, sans-serif;color: pink; background-color: #f1e9e9;}
+        p {text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;font-size: 48px;color: pink; font-size: 48px;}
+        img {align-self: center;}
+        div {display: flex; justify-content: center;}
+        button{position:sticky; align-self: top; height: 10vh; width: 40vw; align-self: center;}
+    </style>
+    </head>
+<body>
+   <h1>Here is the meme goofball</h1>
+   <p><img src="{{meme_pic}}" ></img></p>
+   <p>Current subreddit: {{subreddit}}</p>
+   <div>
+        <button onclick="test()">Refresh</button>
+    </div>
+    <script>
+    function test(){
+            location.reload()
+}
+    </script>
+</body>
+</html>
